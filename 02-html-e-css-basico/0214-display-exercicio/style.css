@@ -1,0 +1,43 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin: 0px;
+}
+
+.produto {
+    background: #111;
+    color: white;
+    padding: 30px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.cor {
+    color: #febe01;
+}
+
+p {
+    color: #b2b2b2;
+}
+
+a {
+    /*Lembrando que "display: inline-block;" 
+    é usada para tornar um elemento de bloco em um elemento de linha*/
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background: rgb(255, 172, 18);
+    padding: 10px;
+    border-radius: 4px;
+}
+

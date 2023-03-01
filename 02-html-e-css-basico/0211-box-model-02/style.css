@@ -1,0 +1,30 @@
+div {
+    background: #aaa;
+    width: 140px; /*width sem declarar valor é auto, pega toda a largura da tela*/
+    height: 80px; 
+    padding: 30px; /*padding é a margin interna*/
+    border: 5px solid #111; /*border, espessura, tipo e cor*/
+    margin: 30px; 
+}
+
+body {
+    margin: 0px; /*body já tem margin padrão, sempre declarar 0px para tirar o padrão*/
+}
+
+h1 {
+    background: #84e;
+    padding: 20px;
+    border: 4px solid #111;
+    margin: 40px;
+}
+
+h2 {
+    background: aquamarine;
+    width: 140px; /*com a largura da box menor que o conteúdo, 
+    a box vai aumentar e se adaptar na altura/height, porém se a altura foi declarada valor, 
+    o conteúdo da box vai quebrar e sair da box*/
+    height: 100px;
+    padding: 20px;
+    border: 4px solid #111;
+    margin: 20px;
+}

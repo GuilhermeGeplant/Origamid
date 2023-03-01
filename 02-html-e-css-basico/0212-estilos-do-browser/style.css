@@ -1,0 +1,11 @@
+body {
+    color: seagreen;
+}
+
+/*Alguns elementos não herdam por padrão, assim como o a/link por esse motivo a color do body não surge efeito*/
+a {
+    /*Ou declara valor para o elemento*/
+    color: seagreen;
+    /*Ou declara o valor como "sim ele herda/inherit"*/
+    color: inherit;
+}

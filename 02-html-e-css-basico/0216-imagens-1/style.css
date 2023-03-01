@@ -1,0 +1,14 @@
+img {
+    /*max-width 100% serve para a imagem não estourar, 
+    não ficar maior que o elemento pai/body no caso, mesmo que aumente a janela,
+    porém se a janela aumentar mais que a resolução da imagem, a imagem não acompanha, obs: boa prática*/
+    /*max-width: 100%;*/
+
+    /*Já o width: 100%;, não importa o tamanho da imagem, ela vai acompanhar a janela,
+    ela tendo resolução ou não, obs: isso não é uma boa prática*/
+    width: 100%;
+
+    /*elemento de bloco, 
+    o que significa que ele ocupa toda a largura disponível na linha e começa em uma nova linha,*/
+    display: block;
+}

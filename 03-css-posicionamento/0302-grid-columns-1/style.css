@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.comprar {
+    background: #a8f;
+    padding: 10px 20px;
+    color: #103;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.item {
+    background: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    padding: 20px;
+    border-radius: 4px;
+    /*Como grid define o espaçamento único por cada item, as margens não colidem*/
+    display: grid;
+}
+
+.grid {
+    display: grid; /*Para usar as propriedades da gri é preciso declarar o display*/
+    /*1fr 1fr vai distribuir de forma igual, é como se fosse 50 / 50
+    caso fosse 1fr e 2fr a segunda coluna seria maior algo como 30 / 70*/
+    /*grid-template-columns: 1fr 1fr;*/
+
+    grid-template-columns: 300px 300px;
+
+    gap: 20px; /*O gap vai dar um espaçamento para essas colunas*/
+
+    /*Está justificando onde vai ficar as colunas*/
+    justify-content: center;
+}
