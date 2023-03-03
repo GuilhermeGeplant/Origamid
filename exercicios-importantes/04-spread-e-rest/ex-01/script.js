@@ -7,7 +7,7 @@ que faz a soma.
 
 /*
 Explicação
-Issa é a sintaxe para algo indeterminado (...), função arrow recebe números indeterminados como parâmetro
+Essa é a sintaxe para algo indeterminado (...), função arrow recebe números indeterminados como parâmetro
 .reduce é um método que pode ser aplicado em um array para reduzi-lo a um único valor,
 o primeiro parâmetro é o acumulador que no caso é o total, e o segundo parâmetro é o valor atual,
 no caso é o parâmetro num, o retorno => é o total + num
