@@ -14,8 +14,6 @@ const clima = [
   { dia: '08/01/2022', tempMax: 33, tempMin: 23, precipitacao: 0 },
 ]
 
-Agora, vamos criar um exercício que utilize cada um dos métodos mencionados acima para manipular essa lista de objetos.
-
 O exercício consiste em escrever uma função que:
 
 1) Recebe a lista de objetos clima como argumento;
@@ -46,7 +44,60 @@ const clima = [
     { dia: '05/01/2022', tempMax: 25, tempMin: 15, precipitacao: 1.2 },
     { dia: '06/01/2022', tempMax: 27, tempMin: 17, precipitacao: 0.6 },
     { dia: '07/01/2022', tempMax: 31, tempMin: 21, precipitacao: 0.3 },
-    { dia: '08/01/2022', tempMax: 33, tempMin: 23, precipitacao: 0 }
+    { dia: '08/01/2022', tempMax: 33, tempMin: 23, precipitacao: 0 },
 ]
+
+const listaObj = (objs) => {
+    console.log(objs)
+}
+
+listaObj(clima)
 //Questão 1).
 
+const temperaturaMaxima = clima.map(dias => dias.tempMax)
+
+console.log(temperaturaMaxima)
+//Questão 2).
+
+const calculo = clima.reduce((soma, clima) => soma + clima.tempMax, 0)
+const mediaTemp = calculo / clima.length
+
+console.log(mediaTemp.toFixed(0))
+//Questão 3).
+
+const precipitacao = clima.filter((clima) => clima.precipitacao > 0)
+
+console.log(precipitacao)
+//Questão 4).
+
+const tempMaisAlta = (temp) => {
+    console.log(`Temperatura máxima: ${temp.tempMax}`)
+}
+
+clima.forEach(temperaturas => tempMaisAlta(temperaturas))
+//Questão 5).
+
+console.log(clima.some((dia) => dia.precipitacao > 1))
+//Questão 6).
+
+console.log(clima.every((clima) => clima.tempMin > 15))
+//Questão 7).
+
+console.log(clima.find((clima) => clima.precipitacao > 0.5))
+//Questão 8).
+
+console.log(clima.findIndex((clima) => clima.tempMin < 20))
+//Questão 9).
+
+/*
+Lembrando: callback é uma função que é passada como argumento para outra função. 
+A função que recebe o callback, por sua vez, invoca essa função durante sua execução, 
+permitindo que o código do callback seja executado em um 
+momento oportuno ou em resposta a um evento específico.
+*/
+const datasConcatenadas = clima.reduceRight((acumulador, valorAtual) => {
+    return acumulador === '' ? valorAtual.dia : valorAtual.dia + ', ' + acumulador
+}, '')
+
+console.log(datasConcatenadas)
+//Questão 10).

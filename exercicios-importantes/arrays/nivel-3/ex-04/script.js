@@ -39,4 +39,44 @@ Cada registro é representado por um objeto com as seguintes propriedades:
     contém apenas os registros de medição em que o nível do rio seja superior a 3,5 metros.
 */
 
+const rios = [
+    { data: '2022-01-01', nivel: 3.45 },
+    { data: '2022-01-02', nivel: 3.20 },
+    { data: '2022-01-03', nivel: 3.75 },
+    { data: '2022-01-04', nivel: 3.90 },
+    { data: '2022-01-05', nivel: 4.15 },
+    { data: '2022-01-06', nivel: 4.05 },
+    { data: '2022-01-07', nivel: 3.80 },
+    { data: '2022-01-08', nivel: 3.60 },
+    { data: '2022-01-09', nivel: 3.50 },
+    { data: '2022-01-10', nivel: 3.25 },
+    { data: '2022-01-11', nivel: 3.10 },
+    { data: '2022-01-12', nivel: 2.95 },
+    { data: '2022-01-13', nivel: 2.80 }
+]
+console.log(rios)
+console.log('---------------------------------------------------')
 
+rios.forEach((rio) => console.log(rio.nivel))
+//Questão 1).
+
+const riosDatas = rios.map((rios) => rios.data)
+console.log(riosDatas)
+console.log('---------------------------------------------------')
+//Questão 2).
+
+console.log(rios.map((rios) => rios.nivel.toFixed(2)))
+console.log('---------------------------------------------------')
+//Questão 3).
+
+const mediaRios = rios.reduce((acumulador, rios) => acumulador + rios.nivel, 0) / rios.length
+console.log(mediaRios.toFixed(2))
+console.log('---------------------------------------------------')
+//Questão 4).
+
+const registroMax = rios.reduceRight((acumulador, registro) => {
+    return registro.nivel > acumulador.nivel ? registro : acumulador
+})
+console.log(registroMax)
+console.log('---------------------------------------------------')
+//Questão 5).
