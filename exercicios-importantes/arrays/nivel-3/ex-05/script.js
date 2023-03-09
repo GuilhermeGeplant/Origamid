@@ -1,37 +1,111 @@
 /*
-Suponha que você está trabalhando em um projeto para analisar os dados de espécies de árvores em uma floresta. 
-Você tem um conjunto de dados em forma de matriz, onde cada elemento representa uma espécie de árvore e seu diâmetro médio. 
-Cada registro é representado por um objeto com as seguintes propriedades:
+Suponha que você é um agricultor e tem uma lista de amostras de solo coletadas de diferentes áreas de sua fazenda. 
+Cada amostra é um objeto com as seguintes propriedades: 
+"id" (um número inteiro único), "área" (um número que representa a área em metros quadrados) e "ph" (o valor do pH do solo). 
+Você precisa processar esses dados para obter algumas informações úteis.
 
-[
-  { especie: 'ipê', diametro: 45 },
-  { especie: 'jatobá', diametro: 70 },
-  { especie: 'cedro', diametro: 30 },
-  { especie: 'aroeira', diametro: 25 },
-  { especie: 'peroba', diametro: 60 },
-  { especie: 'pau-brasil', diametro: 40 },
-  { especie: 'jacarandá', diametro: 55 },
-  { especie: 'jequitibá', diametro: 80 },
-  { especie: 'angico', diametro: 20 },
-  { especie: 'urupeva', diametro: 50 }
+const amostras = [
+  { id: 1, area: 100, ph: 6.5 },
+  { id: 2, area: 200, ph: 5.8 },
+  { id: 3, area: 300, ph: 7.2 },
+  { id: 4, area: 400, ph: 4.9 },
+  { id: 5, area: 500, ph: 6.1 }
 ]
 
-1) Use o método .forEach() e uma função de seta para imprimir o diâmetro médio de cada espécie de árvore.
-2) Use o método .map() e uma função de seta para criar uma nova matriz que contém apenas as espécies de árvores.
-3) Use o método .map() e uma função de seta para criar uma nova matriz que contém o 
-    diâmetro médio de cada espécie de árvore, mas com os valores arredondados para duas casas decimais.
-4) Use o método .reduce() para calcular a média do diâmetro médio de todas as espécies de árvores.
-5) Use o método .reduceRight() para encontrar a espécie de árvore com o maior diâmetro médio.
-6) Use o método .some() e uma função de seta para verificar se há alguma espécie de 
-    árvore em que o diâmetro médio seja superior a 75 cm.
-7) Use o método .every() e uma função de seta para verificar se todas as 
-    espécies de árvores têm diâmetro médio superior a 20 cm.
-8) Use o método .find() e uma função de seta para encontrar a primeira espécie de 
-    árvore em que o diâmetro médio seja superior a 50 cm.
-9) Use o método [].findIndex() e uma função de seta para encontrar o índice da primeira 
-    espécie de árvore em que o diâmetro médio seja superior a 50 cm.
-10) Use o método .filter() e uma função de seta para criar uma nova matriz que 
-    contém apenas as espécies de árvores em que o diâmetro médio seja superior a 40 cm.
+1) Crie uma função que receba a lista de amostras de solo e calcule a área total de 
+    sua fazenda. Use o método .reduce() para realizar essa operação.
+2) Crie uma função que receba a lista de amostras de solo e calcule a média do 
+    pH do solo em toda a fazenda. Use o método .reduce() e .length para realizar essa operação.
+3) Crie uma função que receba a lista de amostras de solo e filtre apenas as 
+    amostras com pH abaixo de 6. Use o método .filter() para realizar essa operação.
+4) Crie uma função que receba a lista de amostras de solo e encontre a 
+    amostra com o menor valor de pH. Use o método .reduce() para realizar essa operação.
+5) Crie uma função que receba a lista de amostras de solo e calcule a 
+    área total da fazenda, mas usando o método .forEach() em vez de .reduce().
+6) Crie uma função que receba a lista de amostras de solo e verifique se 
+    todas as amostras têm um pH maior que 5. Use o método .every() para realizar essa operação.
+7) Crie uma função que receba a lista de amostras de solo e verifique se 
+    há pelo menos uma amostra com pH abaixo de 5. Use o método .some() para realizar essa operação.
+8) Crie uma função que receba a lista de amostras de solo e retorne um 
+    novo array contendo apenas os valores de pH das amostras. Use o método .map() para realizar essa operação.
+9) Crie uma função que receba a lista de amostras de solo e retorne o 
+    índice da amostra com o maior valor de pH. Use o método .reduceRight() e Math.max() para realizar essa operação.
+10) Crie uma função que receba a lista de amostras de solo e encontre a 
+    primeira amostra com pH abaixo de 5. Use o método .find() para realizar essa operação.
+11) Crie uma função que receba a lista de amostras de solo e encontre o 
+    índice da primeira amostra com pH abaixo de 5. Use o método .findIndex() para realizar essa operação.
 */
 
+const amostras = [
+    { id: 1, area: 100, ph: 6.5 },
+    { id: 2, area: 200, ph: 5.8 },
+    { id: 3, area: 300, ph: 7.2 },
+    { id: 4, area: 400, ph: 4.9 },
+    { id: 5, area: 500, ph: 6.1 }
+]
+console.log(amostras)
+console.log('---------------------------------------------------')
 
+const mediaArea = amostras.reduce((acumulador, amostras) => acumulador + amostras.area, 0) / amostras.length
+console.log(mediaArea)
+console.log('---------------------------------------------------')
+//Questão 1).
+
+const mediaPh = amostras.reduce((acumulador, amostras) => acumulador + amostras.ph, 0) / amostras.length
+console.log(mediaPh)
+console.log('---------------------------------------------------')
+//Questão 2).
+
+console.log(amostras.filter((amostras) => amostras.ph < 6))
+console.log('---------------------------------------------------')
+//Questão 3).
+
+function encontrarMenorAmostraDeSolo(amostras) {
+    const menorAmostra = amostras.reduce((amostraAtual, amostraProxima) => {
+        return amostraProxima.ph < amostraAtual.ph ? amostraProxima : amostraAtual
+    })
+    console.log(menorAmostra)
+}
+encontrarMenorAmostraDeSolo(amostras)
+console.log('---------------------------------------------------')
+//Questão 4).
+
+function calcularAreaTotal(amostras) {
+    let areaTotal = 0
+    amostras.forEach((amostra) => {
+        areaTotal += amostra.area
+    })
+    return areaTotal
+}
+
+console.log(calcularAreaTotal(amostras))
+console.log('---------------------------------------------------')
+//Questão 5).
+
+console.log(amostras.every((amostra) => amostra.ph > 5))
+console.log('---------------------------------------------------')
+//Questão 6).
+
+console.log(amostras.some((amostra) => amostra.ph < 5))
+console.log('---------------------------------------------------')
+//Questão 7).
+
+console.log(amostras.map((amostra) => amostra.ph))
+console.log('---------------------------------------------------')
+//Questão 8).
+
+function obterIndiceMaiorPh(amostras) {
+    return amostras.reduceRight((iMax, amostra, i, arr) => amostra.ph > arr[iMax].ph ? i : iMax, 0)
+}
+
+console.log(obterIndiceMaiorPh(amostras))
+console.log('---------------------------------------------------')
+//Questão 9).
+
+console.log(amostras.find((amostra) => amostra.ph < 5))
+console.log('---------------------------------------------------')
+//Questão 10).
+
+console.log(amostras.findIndex((amostra) => amostra.ph < 5))
+console.log('---------------------------------------------------')
+//Questão 11).
