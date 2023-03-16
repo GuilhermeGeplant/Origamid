@@ -46,7 +46,7 @@ function retornoBusca() {
             `
         })
         .catch(error => {
-            console.error('Ocorreu um erro ao buscar os dados:', error);
-            divResultado.innerHTML = 'Ocorreu um erro ao buscar os dados. Tente novamente mais tarde.';
+            console.error('Ocorreu um erro ao buscar os dados:', error)
+            divResultado.innerHTML = 'Ocorreu um erro ao buscar os dados. Tente novamente mais tarde.'
         })
 }
