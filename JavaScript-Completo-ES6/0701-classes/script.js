@@ -1,51 +1,55 @@
 // function Button(text, background) {
-//   this.text = text;
-//   this.background = background;
+//   this.text = text
+//   this.background = background
 // }
 
 // Button.prototype.element = function() {
-//   const buttonElement = document.createElement('button');
-//   buttonElement.innerText = this.text;
-//   buttonElement.style.background = this.background;
-//   return buttonElement;
+//   const buttonElement = document.createElement('button')
+//   buttonElement.innerText = this.text
+//   buttonElement.style.background = this.background
+//   return buttonElement
 // }
 
 class Button {
   constructor(text, background, color) {
-    this.text = text;
-    this.background = background;
-    this.color = color;
+    this.text = text
+    this.background = background
+    this.color = color
   }
   element() {
-    const buttonElement = document.createElement('button');
-    buttonElement.innerText = this.text;
-    buttonElement.style.background = this.background;
-    buttonElement.style.color = this.color;
-    return buttonElement;
+    const buttonElement = document.createElement('button')
+    buttonElement.innerText = this.text
+    buttonElement.style.background = this.background
+    buttonElement.style.color = this.color
+    return buttonElement
   }
   appendTo(target) {
-    const targetElement = document.querySelector(target);
-    targetElement.appendChild(this.element());
-    return targetElement;
+    const targetElement = document.querySelector(target)
+    targetElement.appendChild(this.element())
+    return targetElement
   }
+  /*
+  Em geral, "static" é usado quando queremos definir algo que pertence à classe como um todo, 
+  em vez de pertencer a cada instância individualmente.
+  */
   static blueButton(text) {
-    return new Button(text, 'blue', 'white');
+    return new Button(text, 'blue', 'white')
   }
 }
 
-const botaoAzul = Button.blueButton('Comprar');
+const botaoAzul = Button.blueButton('Comprar')
 
-// console.log(blueButton.appendTo('body'));
+// console.log(blueButton.appendTo('body'))
 
 // class Button {
 //   constructor(options) {
-//     this.options = options;
+//     this.options = options
 //   }
 //   static createButton(text, background) {
-//     const buttonElement = document.createElement('button');
-//     buttonElement.innerText = text;
-//     buttonElement.style.background = background;
-//     return buttonElement;
+//     const buttonElement = document.createElement('button')
+//     buttonElement.innerText = text
+//     buttonElement.style.background = background
+//     return buttonElement
 //   }
 // }
 
@@ -55,8 +59,8 @@ const botaoAzul = Button.blueButton('Comprar');
 //   color: 'white',
 // }
 
-// const blueButton = new Button(optionsBlue);
+// const blueButton = new Button(optionsBlue)
 
-// const blueButtonStatic = Button.createButton('Clique', 'blue');
+// const blueButtonStatic = Button.createButton('Clique', 'blue')
 
-// console.log(blueButtonStatic);
+// console.log(blueButtonStatic)

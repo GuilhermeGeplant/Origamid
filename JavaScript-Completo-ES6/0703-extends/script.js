@@ -1,26 +1,26 @@
 class Veiculo {
   constructor(rodas, combustivel) {
-    this.rodas = rodas;
-    this.combustivel = combustivel;
+    this.rodas = rodas
+    this.combustivel = combustivel
   }
   acelerar() {
-    console.log('Acelerou');
+    console.log('Acelerou')
   }
 }
 
 class Moto extends Veiculo {
   constructor(rodas, combustivel, capacete) {
-    super(rodas, combustivel);
-    this.capacete = capacete;
+    super(rodas, combustivel)
+    this.capacete = capacete
   }
   acelerar() {
-    super.acelerar();
-    console.log('Acelerou rapido');
+    super.acelerar()
+    console.log('Acelerou rapido')
   }
   empinar() {
-    console.log('Moto empinou com ' + this.rodas + ' rodas');
+    console.log('Moto empinou com ' + this.rodas + ' rodas')
   }
 }
 
-const honda = new Moto(2, 'Gasolina', true);
-const civic = new Veiculo(4);
+const honda = new Moto(2, 'Gasolina', true)
+const civic = new Veiculo(4)
