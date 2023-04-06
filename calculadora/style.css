@@ -1,0 +1,154 @@
+/*https://grid.layoutit.com*/
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    font-size: x-large;
+}
+
+.container {
+    display: grid;
+    /*O grid-template-columns e grid-template-rows definem o número e tamanho das colunas e linhas da grad*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    /*gap é a distância entre as células da grade.*/
+    gap: 2px 2px;
+    /*grid-auto-flow define o modo como os elementos são adicionados à grade.*/
+    grid-auto-flow: row;
+    /*grid-template-areas especifica o layout da grade. (onde cada palavra dentro da string representa a posição do elemento HTML que vai ocupar a row)*/
+    grid-template-areas:
+        "Input Input Input Input"
+        "AC AC AC button-divi"
+        "button-7 button-8 button-9 button-multi"
+        "button-4 button-5 button-6 button-sub"
+        "button-1 button-2 button-3 button-soma"
+        "button-0 button-0 ponto button-igual";
+    /*width e height definem as dimensões do elemento.*/
+    width: 350px;
+    height: 500px;
+
+    /*position: absolute posiciona o elemento com base em um elemento pai que possui position diferente de static. left, top e transform são usados para posicionar o elemento centralizado na tela.*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons-operadores {
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 3px;
+}
+
+.buttons-numeros {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+/*Usar medidas rem ao invés de %*/
+.buttons-numeros:hover {
+    transition: all .1s;
+    border: 3px solid orange;
+    border-radius: 5%;
+}
+
+.buttons-operadores:hover {
+    transition: all .1s;
+    border: 3px solid white;
+    border-radius: 5%;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/*body deve ter uma altura mínima de 100% da altura da viewport e um fundo que é um gradiente linear que começa da esquerda e vai para a direita*/
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(79, 96, 112), rgb(47, 48, 76));
+}
+
+.campo-numeros {
+    grid-area: Input;
+    background-color: rgb(36, 45, 54);
+    border: none;
+    border-radius: 3px;
+    font-size: 40px;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+}
+
+button[value="AC"] {
+    grid-area: AC;
+}
+
+button[value="button-0"] {
+    grid-area: button-0;
+}
+
+button[value="ponto"] {
+    grid-area: ponto;
+}
+
+button[value="button-7"] {
+    grid-area: button-7;
+}
+
+button[value="button-8"] {
+    grid-area: button-8;
+}
+
+button[value="button-9"] {
+    grid-area: button-9;
+}
+
+button[value="button-4"] {
+    grid-area: button-4;
+}
+
+button[value="button-5"] {
+    grid-area: button-5;
+}
+
+button[value="button-6"] {
+    grid-area: button-6;
+}
+
+button[value="button-1"] {
+    grid-area: button-1;
+}
+
+button[value="button-2"] {
+    grid-area: button-2;
+}
+
+button[value="button-3"] {
+    grid-area: button-3;
+}
+
+button[value="button-divi"] {
+    grid-area: button-divi;
+}
+
+button[value="button-multi"] {
+    grid-area: button-multi;
+}
+
+button[value="button-sub"] {
+    grid-area: button-sub;
+}
+
+button[value="button-soma"] {
+    grid-area: button-soma;
+}
+
+button[value="button-igual"] {
+    grid-area: button-igual;
+}

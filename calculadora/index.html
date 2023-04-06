@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Shantell+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Calculadora JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <input class="campo-numeros" placeholder="0" type="text" disabled>
+
+        <button class="buttons-numeros" value="AC" onclick="limpar('')">AC</button>
+        <button class="buttons-numeros" value="button-9" onclick="adicionarNumero('9')">9</button>
+        <button class="buttons-numeros" value="button-8" onclick="adicionarNumero('8')">8</button>
+        <button class="buttons-numeros" value="button-7" onclick="adicionarNumero('7')">7</button>
+        <button class="buttons-numeros" value="button-6" onclick="adicionarNumero('6')">6</button>
+        <button class="buttons-numeros" value="button-5" onclick="adicionarNumero('5')">5</button>
+        <button class="buttons-numeros" value="button-4" onclick="adicionarNumero('4')">4</button>
+        <button class="buttons-numeros" value="button-3" onclick="adicionarNumero('3')">3</button>
+        <button class="buttons-numeros" value="button-2" onclick="adicionarNumero('2')">2</button>
+        <button class="buttons-numeros" value="button-1" onclick="adicionarNumero('1')">1</button>
+        <button class="buttons-numeros" value="button-0" onclick="adicionarNumero('0')">0</button>
+        <button class="buttons-numeros" value="ponto" onclick="adicionarNumero('.')">.</button>
+
+        <button class="buttons-operadores" value="button-divi" onclick="adicionarNumero('/')">/</button>
+        <button class="buttons-operadores" value="button-multi" onclick="adicionarNumero('*')">*</button>
+        <button class="buttons-operadores" value="button-sub" onclick="adicionarNumero('-')">-</button>
+        <button class="buttons-operadores" value="button-soma" onclick="adicionarNumero('+')">+</button>
+        <button class="buttons-operadores" value="button-igual" onclick="resultado()">=</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
