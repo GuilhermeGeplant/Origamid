@@ -1,0 +1,23 @@
+.container-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.25rem 0;
+}
+
+.itens-navegacao {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.itens-navegacao a {
+    color: #898989;
+    padding: 0.938rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.itens-navegacao a:hover {
+    color: orange;
+}

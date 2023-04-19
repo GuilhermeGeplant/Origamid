@@ -1,0 +1,50 @@
+.section-apresentacao-bg {
+    background-image: url('../img/bg-nature-01.jpg');
+    /*Aqui*/
+    box-sizing: border-box;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.container-apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-apresentacao h5 {
+    font-weight: 700px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    padding-top: 100px;
+}
+
+.container-apresentacao h1 {
+    font-weight: 700px;
+    font-size: 70px;
+    line-height: 66px;
+    text-transform: lowercase;
+    padding-bottom: 40px;
+}
+
+.container-apresentacao a {
+    padding: 15px;
+}
+
+/*AQUI*/
+.container-apresentacao p {
+    background-color: rgb(246, 123, 111);
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.container-apresentacao img {
+    width: 460px;
+    padding-top: 40px;
+}

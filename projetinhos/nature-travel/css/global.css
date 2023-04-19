@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+}
+
+h1,
+h2 {
+    font-family: Playfair Display, serif;
+}
+
+h5 {
+    font-family: Montserrat, sans-serif;
+}
+
+p {
+    font-family: Opens Sans, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+    margin: 0px;
+}
+
+ul {
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    /*height: auto;*/
+    display: block;
+}
