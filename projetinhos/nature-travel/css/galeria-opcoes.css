@@ -1,0 +1,61 @@
+.section-galeria-opcoes {
+    position: relative;
+    background-image: url('../img/bg-nature-02.jpg');
+    box-sizing: border-box;
+    background-size: cover;
+    background-position-x: 10%;
+    background-position-y: 10%;
+}
+
+.span-detalhe-galeria-opcoes {
+    position: absolute;
+    /* Adiciona posição absoluta ao elemento filho */
+    top: 150px;
+    /* Posiciona no topo */
+    left: 370px;
+    /* Posiciona na esquerda */
+    z-index: 1;
+    /* Define o valor do z-index */
+    width: 650px;
+    height: 650px;
+    background-color: rgba(60, 83, 83, 0.4);
+    border-radius: 50%;
+}
+
+.container-galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 600px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    margin-right: 300px;
+}
+
+.item-galeria-opcoes {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 20px;
+}
+
+.div-item-galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 230px;
+    min-height: 205px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #597e7c;
+    text-transform: uppercase;
+}

@@ -4,15 +4,16 @@ body {
 
 h1,
 h2 {
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", serif;
 }
 
-h5 {
-    font-family: Montserrat, sans-serif;
+h5,
+h3 {
+    font-family: "Montserrat", sans-serif;
 }
 
 p {
-    font-family: Opens Sans, sans-serif;
+    font-family: "Opens Sans", sans-serif;
 }
 
 h1,
